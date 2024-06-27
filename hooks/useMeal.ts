@@ -26,25 +26,3 @@ export const useMeal = () => {
 
   return { meals, isFetchingMeal, getMeal };
 };
-
-// import { MealType } from '@/models/mealType';
-// import { useQuery } from '@tanstack/react-query';
-
-// export const useMeal = (category: string = 'Beef') => {
-//   const {
-//     data: meals,
-//     isLoading: isFetchingMeal,
-//     refetch: getMeal,
-//   } = useQuery<MealType[]>({
-//     queryKey: ['meals', category],
-//     queryFn: async () => {
-//       const response = await fetch(
-//         `https://themealdb.com/api/json/v1/1/filter.php?c=${category}`
-//       );
-//       const data = await response.json();
-//       return data.meals;
-//     },
-//   });
-
-//   return { meals, isFetchingMeal, getMeal };
-// };
